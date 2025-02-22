@@ -1,1 +1,1 @@
-# project-5
+: Developed a user-friendly web application that enables users to report vehicle issues, such as tire problems or brake failures, by submitting their name and location. The system automatically identifies and notifies the nearest garage, ensuring prompt assistance within a specified timeframe. Using HTML,CSS and JavaScript
