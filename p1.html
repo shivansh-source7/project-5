@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quickfix.com</title>
+  <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span>🔧 Quickfix.com</span>
+    </div>
+    <nav>
+      <a href="#" class="active">Customer View</a>
+      <a href="#">Mechanic View</a>
+      <a href="#">Bill View</a>
+      <a href="#">Admin View</a>
+    </nav>
+  </header>
+
+  <main id="customerView">
+  
+    <div class="form-container">
+      <h2>Report Breakdown</h2>
+      <label for="user-name">Enter Your Name:</label>
+  <input type="text" id="user-name" placeholder="Enter your name" />
+  <br><br>
+      <form id="breakdownForm">
+        <div class="form-group">
+          <label for="location">Your Location</label>
+          <div class="location-input">
+            <input type="text" id="location" placeholder="Enter your location">
+            <button type="button" id="currentLocationBtn">Use Current Location</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Issue Type</label>
+          <div class="issue-types">
+            <button type="button" class="issue-btn" data-issue="Flat Tire">🚗 Flat Tire</button>
+            <button type="button" class="issue-btn" data-issue="Battery Issues">🔋 Battery Issues</button>
+            <button type="button" class="issue-btn" data-issue="Engine Problem">⚠️ Engine Problem</button>
+            <button type="button" class="issue-btn" data-issue="Other">🔧 Other</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" placeholder="Please describe your issue in detail...(if you want)"></textarea>
+        </div>
+
+        <button type="submit" id="request-assistance-btn">Request Assistance</button>
+      </form>
+    </div>
+  </main>
+
+  <main id="mechanicView" style="display: none;">
+    <div class="mechanic-card">
+      <div class="card-header">
+        <h3>New Request</h3>
+        <span class="status">Pending</span>
+      </div>
+      <div class="card-body">
+        <p><strong>ID:</strong> BD001</p>
+        <p><strong>📍 Location:</strong> Acharya institute near bombay dine</p>
+        <p><strong>🔧 Issue Type:</strong> Flat Tire</p>
+        <p><strong>⏱ Estimated Time of Arrival:</strong> 15 minutes</p>
+      </div>
+      <div class="card-footer">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Accept Job Button</title>
+        </head>
+        <body>
+          <button class="accept-job-btn" onclick="handleAcceptJob()">Accept Job</button>
+          <button class="reject-job-btn" onclick="handleRejectJob()">Reject Job</button>
+          
+          <script>
+            function handleAcceptJob() {
+              alert("Job Accepted,just view the distance on map");
+              // Add further logic for accepting the job here
+            }
+          
+            function handleRejectJob() {
+              alert("Job Rejected");
+              // Add further logic for rejecting the job here
+            }
+          </script>
+          
+        </body>
+        </html>
+        
+        <button class="view-map-btn" onclick="window.open('https://www.google.com/maps', '_blank')">View on Map</button>
+
+      </div>
+    </div>
+  </main>
+
+  <main id="billView" style="display: none;">
+    <div class="bill-card">
+      <div class="bill-header">
+        <h2>Service Bill</h2>
+        <span>Nov 26, 2024</span>
+      </div>
+      <p class="invoice-id">Invoice #BILL001</p>
+      <hr>
+      <table class="bill-details">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tire Replacement</td>
+            <td>300.00</td>
+          </tr>
+          <tr>
+            <td>Service Fee</td>
+            <td>80.00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>380.00</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+      <hr>
+      <button id="payNowBtn" class="pay-now-btn"   onclick="redirectToGooglePay()">💳 Pay Now</button>
+
+<script>
+  function redirectToGooglePay() {
+    // URL for Google Pay or a relevant page
+    alert("Payment Sucessful");
+  }
+</script>
+
+    </div>
+  </main>
+
+  <div id="adminView" style="display: none;">
+    <div class="admin-card">
+      <div class="admin-header">
+  <form onsubmit="event.preventDefault(); validateLogin();">
+    <h2>Admin login</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <br>
+    <br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <br>
+    <button id="buttonsum" type="submit ">submit</button>
+  </form>
+  </div>
+  <script>
+    function validateLogin() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "admin123" && password === "admin123") {
+        window.location.href = "admin.php"; // Redirect to admin page
+      } else {
+        document.getElementById("error-message").textContent = "Invalid username or password!";
+      }
+    }
+  </script>
+  </div>
+  </div>
+</div>
+</main>
+
+
+
+  <footer>
+    <p>&copy; 2024 Quickfix. All rights reserved.</p>
+  </footer>
+
+  <script src="p1.js"></script>
+</body>
+</html>

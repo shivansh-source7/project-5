@@ -1,0 +1,387 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+    line-height: 1.6;
+    background-image: url(https://files.oaiusercontent.com/file-AycpVPGNTzfkdU8nJmYZLy?se=2025-02-22T14%3A52%3A04Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Def1aa8ae-0365-4cd4-8da3-b21fbf2d288b.webp&sig=qILHeTFUfIdnd3nXNxljmhXvvHvIFahYlHViMo2ZZMI%3D);
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+    margin: auto;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: lightgreen;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightgreen;
+  }
+  
+  header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: lightgreen;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header nav a.active,
+  header nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Main Content */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - 160px);
+  }
+  
+  .form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Specific Buttons */
+  #currentLocationBtn {
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .issue-types {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .issue-btn {
+    flex: 1;
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .issue-btn.selected {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #request-assistance-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  
+  #request-assistance-btn:hover {
+    background-color: lime;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: lightgreen;
+    border-top: 1px solid #ddd;
+    position: relative;
+  }
+
+/* Mechanic View Card */
+.mechanic-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .card-header .status {
+    background-color: #fffae5;
+    color: #d69e2e;
+    font-weight: bold;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .card-body p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .card-footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .accept-job-btn {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .reject-job-btn {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .accept-job-btn:hover {
+    background-color: #615bb9;
+  }
+
+.reject-job-btn:hover{
+  background-color: #615bb9;
+   
+}
+  
+  .view-map-btn {
+    background-color: #f8f9fa;
+    color: #007bff;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-map-btn:hover {
+    background-color: #e2e6ea;
+  }
+
+  /* Bill View Styles */
+.bill-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .bill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bill-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .bill-header span {
+    font-size: 0.875rem;
+    color: #888;
+  }
+  
+  .invoice-id {
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .bill-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  .bill-details th,
+  .bill-details td {
+    padding: 0.5rem 0;
+    text-align: left;
+  }
+  
+  .bill-details th {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .bill-details tfoot td {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .pay-now-btn {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .pay-now-btn:hover {
+    background-color: #0056b3;
+  }
+
+  #user-name {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #user-name:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+.admin-card{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: Arial, sans-serif;
+}
+
+.admin-header{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#username{
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  gap: 2rem;
+}
+#password{
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  gap: 2rem;
+}
+#buttonsum {
+  background-color: blue;
+  color: #fff;
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#buttonsum:hover {
+  background-color: lime;
+}
+
